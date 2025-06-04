@@ -139,8 +139,6 @@ def main():
     # Continue evaluation from the next epoch
     epoch = last_epoch + 1
     for questions, options_list, correct_answers in dataloader:
-        if epoch == 2:
-            break
         print(f"Evaluating epoch {epoch} with thinking_mode={args.thinking_mode}")
         results, results_df = evaluate_agent(agent, questions, options_list, correct_answers, epoch)
         
